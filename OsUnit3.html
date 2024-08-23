@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Threads are like small, lightweight units of a process that can run independently within a program. Think of a process as a big task, and threads as smaller tasks within it that can run simultaneously. This allows a program to do multiple things at the same time, making it faster and more efficient.
+
+    Thread Management:
+Thread management is about how the operating system controls these threads to ensure they work efficiently without interfering with each other.
+
+Creating Threads:
+
+The operating system can create new threads within a process when needed. For example, when you open a new tab in a browser, a new thread might be created to handle it.
+Scheduling Threads:
+
+The OS decides which thread runs at what time, a process called scheduling. Since the CPU can only do one thing at a time, it switches between threads so quickly that it feels like everything is happening simultaneously.
+Synchronizing Threads:
+
+Sometimes threads need to share resources, like memory or files. To avoid conflicts (like two threads trying to write to the same file at the same time), the OS manages synchronization, ensuring threads work together smoothly.
+Terminating Threads:
+
+When a thread has completed its task, the OS will terminate it, freeing up resources for other tasks. For example, once a download is complete, the thread handling it can be closed.
+    
+
+
+
+----------------------DEADLOCK------------------------
+Deadlock
+A Deadlock occurs in an operating system when two or more processes are stuck waiting for each other to release resources, and none of them can proceed. It's like a traffic jam at an intersection where each car waits for another to move, but no one does, so all cars are stuck.
+
+Example:
+Imagine two processes:
+
+Process A has Resource 1 and needs Resource 2 to finish.
+Process B has Resource 2 and needs Resource 1 to finish.
+Both are waiting for the other to release the resource they need, so neither can proceed, causing a deadlock.
+
+Methods for handling deadlock:
+Deadlock Detection: 
+A deadlock can be detected by a resource 
+scheduler. After a deadlock is detected, it can be 
+resolved using the following methods −
+ All the processes that are involved in the 
+deadlock are terminated. 
+ Resources can be preempted from some 
+processes and given to others till the 
+deadlock is resolved.
+
+
+It is very important to prevent a deadlock before 
+it can occur. So, the system checks each 
+transaction before it is executed to make sure it 
+does not lead to deadlock. If there is even a 
+slight chance that a transaction may lead to 
+deadlock in the future, it is never allowed to 
+execute.
+
+ Deadlock Avoidance
+It is better to avoid a deadlock rather than take 
+measures after the deadlock has occurred. The 
+wait for graph can be used for deadlock 
+avoidance. This is however only useful for 
+smaller databases as it can get quite complex in 
+larger databases
+</body>
+</html>
